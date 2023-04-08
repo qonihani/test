@@ -1,0 +1,208 @@
+# command djskajdk
+PS C:\Users\Asus\Documents\workshopGit\tesDir> cd..
+PS C:\Users\Asus\Documents\workshopGit> ls
+
+    Directory: C:\Users\Asus\Documents\workshopGit
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          08/04/2023    13:17                tesDir
+-a---          08/04/2023    12:00              0 test2.txt
+-a---          08/04/2023    12:43              0 test3.txt
+-a---          08/04/2023    12:00              0 testDir
+
+PS C:\Users\Asus\Documents\workshopGit> mkdir gitTestRepo
+
+    Directory: C:\Users\Asus\Documents\workshopGit
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          08/04/2023    13:29                gitTestRepo
+
+PS C:\Users\Asus\Documents\workshopGit> cd .\gitTestRepo
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git status
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> New-Item .\test4.txt
+
+    Directory: C:\Users\Asus\Documents\workshopGit\gitTestRepo
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          08/04/2023    13:33              0 test4.txt
+
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git status
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git init
+Initialized empty Git repository in C:/Users/Asus/Documents/workshopGit/gitTestRepo/.git/
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)        test4.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git add .\test4.txt
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   test4.txt
+
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git commit
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Asus@DESKTOP-K6B5VH0.(none)')
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git config --global user.name "qonita hanifa"
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git config --global user.email "qonita.hanifa17@gmail.com"
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git commit -m "Add new file"
+[master (root-commit) de6fb23] Add new file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test4.txt
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git remote add origin https://github.com/qonihani/test.git
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git branch -M main
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 215 bytes | 71.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/qonihani/test.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> gh repo clone qonihani/test
+Cloning into 'test'...
+kex_exchange_identification: read: Software caused connection abort
+banner exchange: Connection to 20.205.243.166 port 22: Software caused connection abort
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+failed to run git: exit status 128
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> ls
+
+    Directory: C:\Users\Asus\Documents\workshopGit\gitTestRepo
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          08/04/2023    13:33              0 test4.txt
+
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> New-Item .\test.txt
+
+    Directory: C:\Users\Asus\Documents\workshopGit\gitTestRepo
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          08/04/2023    14:31              0 test.txt
+
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git commit -m "Add new file"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git add .\test.txt
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   test.txt
+
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git push -u origin main
+Everything up-to-date
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> code.
+code.: The term 'code.' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git push
+Everything up-to-date
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> ls
+
+    Directory: C:\Users\Asus\Documents\workshopGit\gitTestRepo
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          08/04/2023    14:31              0 test.txt
+-a---          08/04/2023    13:33              0 test4.txt
+
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> code .
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> code .
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git add -A
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git commit -m "Add new text"
+[main 4ee86ff] Add new text
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test.txt
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 240 bytes | 240.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/qonihani/test.git
+   de6fb23..4ee86ff  main -> main
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> ls
+
+    Directory: C:\Users\Asus\Documents\workshopGit\gitTestRepo
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          08/04/2023    14:31              0 test.txt
+-a---          08/04/2023    13:33              0 test4.txt
+
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git add -A
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git commit -m "Add new text"
+[main 878c499] Add new text
+ 1 file changed, 2 insertions(+)
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 295 bytes | 295.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/qonihani/test.git
+   4ee86ff..878c499  main -> main
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git add -A
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git commit -m "Add new text"
+[main 3d269b0] Add new text
+ 1 file changed, 33 insertions(+)
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo> git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 636 bytes | 636.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/qonihani/test.git
+   878c499..3d269b0  main -> main
+PS C:\Users\Asus\Documents\workshopGit\gitTestRepo>
+
+
